@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Miss You </title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="stylesheet"
+        href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Dancing+Script:wght@700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="floatingNav">
+    
+        <button
+            id="usNavBtn"
+            onclick="goUS()">
+    
+            ∞︎
+    
+        </button>
+    
+        <button
+            id="doorNavBtn"
+            onclick="backToDoors()">
+    
+            🚪
+    
+        </button>
+    
+        <button
+            id="prevNavBtn"
+            onclick="goPrevious()">
+    
+            ⬅
+    
+        </button>
+    
+        <button
+            id="loginNavBtn"
+            onclick="goLogin()">
+    
+            🔐
+    
+        </button>
+    
+    </div>
+    <!-- STARS -->
+
+    <!-- MUSIC -->
+
+    <audio id="bgMusic" loop>
+
+        <source
+            src="C:\Users\sanja\Downloads\V2\assets\music.mp3"
+            type="audio/mp3">
+
+    </audio>
+
+    <!-- LOGIN SCREEN -->
+
+    <section
+        id="loginScreen"
+        class="screen active">
+
+        <div class="loginCharacters">
+        
+           <img
+               src="assets/girl.png"
+               class="character girl">
+        
+            <img
+             src="assets/boy.png"
+             class="character boy">
+        
+        </div>
+
+        <div class="glassCard">
+
+            <h2>
+                🐣 Oru Kutty Surprise 🐣
+            </h2>
+
+            <p>
+                Nambaa Solraa Oru Vishiyam Inga Type Pannuuuu Apoo Thaan Ulla Pogaa Mudiyumm 
+            </p>
+
+            <input
+                id="secretCode"
+                type="password"
+                placeholder=" ">
+
+            <button
+                id="loginBtn">
+
+                Unlock
+
+            </button>
+            <p>
+            <br> Konjammm Unnoda Moolaya useee Pannii Open Pannuungaa Madammmmmmmm <br>🦋🦋🦋🦋🦋
+            </p>
+        </div>
+
+    </section>
+
+    <!-- US SCREEN -->
+    <section
+       id="usScreen"
+       class="screen">
+        <div class="usContainer">
+        
+            <div class="eyesContainer">
+            
+                <h3>Photo click Pannu diii</h3>
+                <img
+                    id="eyeImage"
+                    src="assets/urmi.png"
+                    class="eyePic"
+                    onclick="swapEyes()">
+            
+            </div>
+
+            <p id="eyeDescription">
+            
+                The first thing that caught
+                my attention was your eyes ✨
+            
+            </p>
+
+            <button
+                id="revealBtn"
+                onclick="revealUS()">
+
+                Reveal US
+
+            </button>
+
+        
+            <h2 class="nameText">
+                Urmiiiiiii    ∞︎    Sanjayyyy
+            </h2>
+        
+        
+            <div class="arrow">
+                ↓
+            </div>
+        
+            <h1 class="usTitle">
+                ∞︎  ∞︎ US ∞︎  ∞︎
+            </h1>
+        
+            <p class="magicLine">
+            
+                ✨ Some stories begin
+                with a single look ✨
+            
+            </p>
+        
+            <button
+                class="surpriseBtn"
+                onclick="showScreen('doorScreen')">
+        
+                A Surprise Awaits 😁
+        
+            </button>
+        
+        </div>
+    </section>
+    <!-- DOOR SCREEN -->
+
+    <section
+        id="doorScreen"
+        class="screen">
+
+        <h1 class="doorTitle">
+        </h1>
+
+        <div class="doorContainer">
+
+            <div
+                class="door door1"
+                onclick="openDoor(1)">
+
+                <div class="doorKnob"></div>
+
+            </div>
+
+            <div
+                class="door door2"
+                onclick="openDoor(2)">
+
+                <div class="doorKnob"></div>
+
+            </div>
+
+            <div
+                class="door door3"
+                onclick="openDoor(3)">
+
+                <div class="doorKnob"></div>
+
+            </div>
+
+        </div>
+        <h1 class="newone">
+            <br> 
+        </h1>
+    </section>
+
+    <!-- DOOR OPENING SCREEN -->
+
+    <section
+        id="openingScreen"
+        class="screen">
+
+        <div id="openingDoor">
+            <div class="doorFront">
+                <div class="doorKnob"></div>
+            </div>
+        </div>
+
+        <div class="lightBurst"></div>
+        
+    </section>
+
+
+    <!-- MEMORY SCREEN -->
+
+    <section
+        id="memoryScreen"
+        class="screen">
+
+        <div
+            id="memoryContent">
+
+            <!-- PLACE -->
+
+            <div
+                id="placeStep"
+                class="step">
+
+                <h1 id="placeText"></h1>
+
+                <button
+                    onclick="nextStep()">
+
+                    Next 🐼
+
+                </button>
+
+            </div>
+
+            <!-- DATE -->
+
+            <div
+                id="dateStep"
+                class="step hidden">
+
+                <h1 id="dateText"></h1>
+
+                <button
+                    onclick="nextStep()">
+
+                    Next 🐼
+
+                </button>
+
+            </div>
+
+            <!-- QUOTE -->
+
+            <div
+                id="quoteStep"
+                class="step hidden">
+
+                <p id="quoteText"></p>
+
+                <button
+                    onclick="showPhotos()">
+
+                    Show Memories 💭
+
+                </button>
+
+            </div>
+
+            <!-- PHOTOS -->
+
+            <div
+                id="gallery"
+                class="hidden">
+            </div>
+
+            <!-- DOORS BUTTON -->
+
+
+        </div>
+
+    </section>
+
+    <!-- FINAL HEART -->
+
+
+    <!-- POPUP -->
+
+    <div id="popup"></div>
+
+    <!-- MUSIC BUTTON -->
+
+    <button
+        id="musicBtn">
+
+        🎵
+
+    </button>
+    <div
+        id="photoPopup"
+        class="photoPopup">
+    
+        <img
+            id="popupImage">
+    
+    </div>
+    <script
+        src="script.js">
+    </script>
+</body>
+
+</html>
