@@ -2,7 +2,7 @@
 // LOGIN SETTINGS
 // ======================
 
-const SECRET_CODE = "1111";
+const SECRET_CODE = "US";
 
 let attempts = 0;
 
